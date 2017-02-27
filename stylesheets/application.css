@@ -84,6 +84,14 @@ h2, .wiki h1, h3, .wiki h2 { color: #222; }
 
 div#content > div.wiki { padding: 10px; padding-top: 20px; }
 
+.wiki ul, .wiki ol {
+    padding-left: 20px;
+}
+
+.wiki ul li:not(:first-child), .wiki ol li:not(:first-child) {
+    padding-top: 0.5em;
+}
+
 #header { background-position-y: 11%; }
 
 div#welcome-store-content h1, div#welcome-store-content h2, div#welcome-store-content h3, div#welcome-store-content h4 { color: #222; }
@@ -102,7 +110,7 @@ background: #A02626;
 margin: 15px -10px 15px -15px;
 padding: 5px 10px; }
 
-#sidebar h3:first-child { margin-top: 0px; }
+#sidebar > h3:first-child { margin-top: 0px; }
 
 #footer { background-color: #000000; border: 0px; color: #fff; margin-top: 45px; padding: 15px; }
 #footer a { color: #fff; }
@@ -620,3 +628,63 @@ textarea, pre, .ui-widget textarea {
 textarea#review_comment {
     margin-left: 0px !important;
 }
+
+
+.icon-add { background-repeat: no-repeat; }
+.icon-edit { background-repeat: no-repeat; }
+.icon-copy { background-repeat: no-repeat; }
+.icon-duplicate { background-repeat: no-repeat; }
+.icon-del { background-repeat: no-repeat; }
+.icon-move { background-repeat: no-repeat; }
+.icon-save { background-repeat: no-repeat; }
+.icon-cancel { background-repeat: no-repeat; }
+.icon-multiple { background-repeat: no-repeat; }
+.icon-folder { background-repeat: no-repeat; }
+.icon-folder { background-repeat: no-repeat; }
+.icon-package { background-repeat: no-repeat; }
+.icon-user { background-repeat: no-repeat; }
+.icon-projects { background-repeat: no-repeat; }
+.icon-help { background-repeat: no-repeat; }
+.icon-attachment  { background-repeat: no-repeat; }
+.icon-history  { background-repeat: no-repeat; }
+.icon-time  { background-repeat: no-repeat; }
+.icon-time-add  { background-repeat: no-repeat; }
+.icon-stats  { background-repeat: no-repeat; }
+.icon-warning  { background-repeat: no-repeat; }
+.icon-fav  { background-repeat: no-repeat; }
+.icon-fav-off  { background-repeat: no-repeat; }
+.icon-reload  { background-repeat: no-repeat; }
+.icon-lock  { background-repeat: no-repeat; }
+.icon-unlock  { background-repeat: no-repeat; }
+.icon-checked  { background-repeat: no-repeat; }
+.icon-details  { background-repeat: no-repeat; }
+.icon-report  { background-repeat: no-repeat; }
+.icon-comment  { background-repeat: no-repeat; }
+.icon-summary  { background-repeat: no-repeat; }
+.icon-server-authentication { background-repeat: no-repeat; }
+.icon-issue { background-repeat: no-repeat; }
+.icon-zoom-in { background-repeat: no-repeat; }
+.icon-zoom-out { background-repeat: no-repeat; }
+.icon-passwd { background-repeat: no-repeat; }
+.icon-test { background-repeat: no-repeat; }
+
+.icon-file { background-repeat: no-repeat; }
+.icon-file.text-plain { background-repeat: no-repeat; }
+.icon-file.text-x-c { background-repeat: no-repeat; }
+.icon-file.text-x-csharp { background-repeat: no-repeat; }
+.icon-file.text-x-java { background-repeat: no-repeat; }
+.icon-file.text-x-javascript { background-repeat: no-repeat; }
+.icon-file.text-x-php { background-repeat: no-repeat; }
+.icon-file.text-x-ruby { background-repeat: no-repeat; }
+.icon-file.text-xml { background-repeat: no-repeat; }
+.icon-file.text-css { background-repeat: no-repeat; }
+.icon-file.text-html { background-repeat: no-repeat; }
+.icon-file.image-gif { background-repeat: no-repeat; }
+.icon-file.image-jpeg { background-repeat: no-repeat; }
+.icon-file.image-png { background-repeat: no-repeat; }
+.icon-file.image-tiff { background-repeat: no-repeat; }
+.icon-file.application-pdf { background-repeat: no-repeat; }
+.icon-file.application-zip { background-repeat: no-repeat; }
+.icon-file.application-x-gzip { background-repeat: no-repeat; }
+
+

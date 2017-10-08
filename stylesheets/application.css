@@ -240,7 +240,7 @@ tr.odd.priority-lowest td, tr.even.priority-lowest td { border-color: #add7f3; }
 input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover { background-color: #ccccbb; }
 */
 .button, input[type="submit"], input[type="button"], #quick-search label a { 
-    color: white;
+    color: white !important;
     text-shadow: none;
     background-color: #d84a38;
     background-image: none;

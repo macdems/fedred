@@ -3,7 +3,7 @@
 @import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700|Source+Code+Pro:400,600,700&subset=latin-ext,latin);
 
 /* body { font-family: "Source Sans Pro",sans-serif; font-size: 15px; color: #333333; background-color: #fff; line-height: 1.4; overflow-x: hidden; } */
-body { font-size: 13px; color: #333333; background-color: #fff; line-height: 1.4; overflow-x: hidden; }
+body { font-size: 13px; color: #333333; background-color: #fff; overflow-x: hidden; }
 
 h1, h2, h3, h4 { font-family: "Source Sans Pro",sans-serif; }
 
@@ -41,7 +41,6 @@ div#main.nosidebar div#content { margin-right: 0px; }
     padding: 0px 10px 20px 15px !important;
     background: #ffffff;
     border: 1px solid #A02626;
-    zoom: 1;
 }
 
 div#content > h2, div#content h2.contacts_header { border-bottom: 1px solid #ccc; background: #FFF; }
@@ -124,10 +123,10 @@ h2, h3, h4 { border-bottom: 0px; }
 .wiki.wiki-page > h3 { font-weight: bold; font-size: 1em;}
 
 #main-menu { left: -15px; margin-left: 15px; width: 100%; margin-right: 0; position: relative; background-color: #A02626; width: 100%;  }
-#main-menu ul { *zoom: 1; margin-top: 0; padding-left: 0; background-color: transparent !important; }
+#main-menu ul { margin-top: 0; padding-left: 0; background-color: transparent !important; }
 #main-menu ul:before, #main-menu ul:after { display: table; content: ""; line-height: 0; }
 #main-menu ul:after { clear: both; }
-#main-menu ul li { margin: 0; padding: 0; }
+#main-menu ul li { margin: 0; padding: 0; display: inline; }
 #main-menu ul li a {
     background-color: #A02626;
     display: block;
@@ -135,13 +134,24 @@ h2, h3, h4 { border-bottom: 0px; }
     padding: 8px 12px;
     color: #FFFFFF;
     font-family: "Source Sans Pro",sans-serif;
-    fomt-size: 15px;
     font-weight: bold;
     text-decoration: none;
-    height: 20px; }
+    height: 17px; }
 #main-menu ul li a.selected { color: #FFFFFF; background-color: #600404; }
 #main-menu ul li a.selected:hover { background-color: #600404; color: #eee; }
 #main-menu ul li a:hover { color: #FFF; background-color: #600404; }
+
+#main-menu li a.new-object { background-color: #600404; }
+
+#main-menu .menu-children {
+    border: 1px solid #600404;
+    background-color: #fff !important;
+}
+#main-menu .menu-children li {
+  overflow-x: hidden;
+}
+#main-menu .menu-children li a { width: 100%; }
+#main-menu .menu-children li a:hover { background-color: #600404; color: #eee; }
 
 table.list tbody td, table.list tbody tr:hover td { border: 0px none transparent; }
 
@@ -167,8 +177,7 @@ table.list thead th a{ color: #fff !important; }
 tr.assigned-to-me td.assigned_to, tr.created-by-me td.author { font-weight: bold; }
 
 #quick-search { margin: 8px 20px 0 0; clear: right;}
-#quick-search label { padding-top: 9px;
-display: inline-block;}
+#quick-search label { padding-top: 9px; display: inline-block;}
 
 table.list.issues td { padding: 2px 10px !important; vertical-align: middle; }
 table.list input[type="checkbox"] { margin-top: 6px; position: relative; bottom: 2px; }
@@ -407,10 +416,24 @@ div.wiki pre, .wiki pre { padding: 6px 10px; -webkit-border-radius: 3px; -moz-bo
 div#content > div.wiki { padding-top: 15px; }
 
 #projects-index ul.projects ul.projects { border-left: 3px solid #E0E0E0; }
-ul.projects.root { padding: 10px; }
-@media (min-width: 1024px) { ul.projects.root { -webkit-column-count: 3; -moz-column-count: 3; -ms-column-count: 3; -o-column-count: 3; column-count: 3; }
-  ul.projects.root li.root { border: 1px solid #DDD; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); display: inline-block; margin: 0 0 10px; padding: 5%; vertical-align: top; width: 90%; } }
-@media (min-width: 1284px) { ul.projects.root { -webkit-column-count: 4; -moz-column-count: 4; -ms-column-count: 4; -o-column-count: 4; column-count: 4; } }
+ul.projects.root { padding: 0 10px; }
+@media (min-width: 1024px) {
+  ul.projects.root li.root { border: 1px solid #DDD;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 5%;
+    vertical-align: top;
+    width: 90%;
+  }
+  ul.projects.root li.root div.description { border: none !important; }
+}
+
 ul.projects a.project { font-weight: bold; font-size: 1.1em; }
 
 div.journal .details { border: 1px solid white; }
@@ -421,7 +444,7 @@ div.journal .details:hover { background: #FFD; border: 1px solid silver !importa
 #context-menu li:hover { border: 1px solid #eee !important; background-color: #eee; }
 #context-menu ul { border-top: 1px solid #DDD; border-left: 1px solid #DDD; border-bottom: 1px solid #DDD !important; border-right: 1px solid #DDD !important; }
 
-div.tooltip:hover span.tip { border: 1px solid #D9D9D9; zoom: 1; -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); }
+div.tooltip:hover span.tip { border: 1px solid #D9D9D9; -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05); }
 
 /*table.progress td.closed { background: #AECCD7 none repeat scroll 0%; }
 table.progress td.done { background: #EAF2F5 none repeat scroll 0%; } */
@@ -437,9 +460,17 @@ div.modal h3.title { background: transparent; color: inherit; }
 #modalbg { background: white; opacity: 0.75; }
 
 body.action-login #content, body.action-login #main.nosidebar #content { background: inherit; border: 0px; box-shadow: none; }
-body.action-login #login-form table { padding: 3em; background: white; border: 1px solid #A02626; }
+body.action-login #login-form { padding: 3em; background: white; border: 1px solid #A02626; }
 
-#login-form input#username, #login-form input#password { outline: none; margin: 0px; border: 1px solid #ccc; padding: 6px; font-size: 140%; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+#login-form input#username, #login-form input#password, #login-form input#openid_url {
+    outline: none;
+    margin: 0px;
+    border: 1px solid #ccc;
+    font-size: 120%;
+    height: 2.2em;
+    -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; 
+}
+#login-form label { margin-top: 2ex; }
 
 .controller-account.action-login div.flash, div.wiki div.flash { margin: 5px; }
 
